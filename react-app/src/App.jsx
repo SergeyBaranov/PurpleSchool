@@ -1,39 +1,16 @@
 
 import './App.css';
 import Button from './components/Button/Button';
-import CardButton from './components/CardButton/CardButton';
-import JournalItem from './components/JournalItem/JournalItem';
+import Heading from './components/Heading/Heading';
+import Paragraph from './components/Paragraph/Paragraph';
 
 function App() {
 
-  const data = [
-    {
-      title: 'Подготовка к обновлению курсов',
-      text: 'Горные походы открывают удивительные природные ландшафты',
-      date: new Date()
-    },
-    {
-      title: 'Поход в годы',
-      text: 'Большое значение в горном туризме придается бытовому обустройству',
-      date: new Date()
-    }
-  ];
-
   return (
     <>
-      <h1>Заголовок</h1>
-      <p>Какой-то текст</p>
+      <Heading title="Поиск" />
+      <Paragraph />
       <Button />
-      <CardButton  >
-        Добавить пункт
-      </CardButton>
-      <CardButton  >
-        <JournalItem 
-          title={data[1].title}
-          text={data[1].text}
-          sate={data[1].date}
-        />
-      </CardButton>
     </>
   );
 }
