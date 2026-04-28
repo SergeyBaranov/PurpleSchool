@@ -2,6 +2,7 @@ import React from "react";
 import Button from "../Button/Button";
 import InputComponent from "../InputComponent/InputComponent";
 import './InputForm.css';
+import { useState } from "react";
 
 function InputForm() {
     const [name, setName] = useState("");
