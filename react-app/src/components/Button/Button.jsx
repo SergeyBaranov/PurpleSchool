@@ -1,23 +1,13 @@
 import './Button.css';
 import React, { useState } from "react";
 
-function Button() {
-
-  const [isLoading, setIsLoading] = useState(false);
-
-  const handleClick = () => {
-    setIsLoading(true);
-    // Симуляция загрузки
-    setTimeout(() => {
-      setIsLoading(false);
-    }, 2000);
-  }
+function Button({ isLoading = false, onClick }) {
 
   return (
     <button
-    className='button accent'
-    onClick={handleClick}
-    disabled={isLoading}
+      className='button accent'
+      onClick={onClick}
+      disabled={isLoading}
     >
       {isLoading ? 'Идет поиск...' : 'Искать'}
     </button>
