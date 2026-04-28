@@ -1,0 +1,25 @@
+.top-menu-item a {
+    color: #A8AEBF;
+    font-family: Google Sans, system-ui, 'Segoe UI', Roboto, sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 24px; 
+    letter-spacing: 0.32px;
+    text-decoration: none;
+    display: flex;
+    padding: 0.5rem 1rem;
+    align-items: center;
+    gap: 0.5rem;
+    border-radius: 8px;
+}
+
+.top-menu-item a:hover {
+    color: #FFF;
+    background-color: rgba(255, 255, 255, 0.05);
+    transition: all 0.3s ease;
+}
+
+.top-menu-item a:active {
+    color: #FFF;
+}

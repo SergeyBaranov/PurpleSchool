@@ -8,4 +8,6 @@
   border: 2px solid var(--Primary-400, #7B6EF6);
   background: var(--Primary-400, #7B6EF6);
   max-width: 120px;
+  color: #ffffff;
+  font-size: 16px;
 }
