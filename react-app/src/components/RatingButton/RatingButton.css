@@ -1,0 +1,16 @@
+.rating-button {
+    position: absolute;
+    left: 16px;
+    top: 16px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-family: Google Sans, system-ui, 'Segoe UI', Roboto, sans-serif;
+    font-size: 16px;
+    border-radius: 8px;
+    background: rgba(0, 0, 0, 0.65);
+    backdrop-filter: blur(4px);
+    color: #FFAD49;
+    border: 0;
+    padding: 2px 8px;
+}

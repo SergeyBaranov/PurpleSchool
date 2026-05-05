@@ -1,0 +1,17 @@
+.addToFavouriteButton {
+    background-color: transparent;
+    border: 0;
+    color: #7B6EF6;
+    font-size: 16px;
+    font-family: Google Sans, system-ui, 'Segoe UI', Roboto, sans-serif;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.addToFavouriteButton:hover {
+    background-color: #7c6ef613;
+}

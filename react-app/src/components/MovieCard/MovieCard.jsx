@@ -1,18 +1,16 @@
 import React from "react";
 import "./MovieCard.css";
+import AddToFavouritesButton from '../AddToFavouriteButton/AddToFavouriteButton';
+import MoviePosterTitle from '../MoviePosterTitle/MoviePosterTitle';
+import Poster from '../Poster/Poster';
 
-const movie = {
-    title: "Мстители: Финал",
-    releaseDate: "2019",
-    rating: "8.4",
-    posterUrl: "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/or06FN3Dka5tukK1e9sl16pB3iy.jpg"
-}
-
-function MovieCard() {
+function MovieCard({ movie }) {
     
     return (
         <div className="movieCard">
-            
+            <Poster src={movie.posterUrl} />
+            <MoviePosterTitle title={movie.title} /> 
+            <AddToFavouritesButton />
         </div>
     )
 }
