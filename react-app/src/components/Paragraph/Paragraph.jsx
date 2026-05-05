@@ -1,4 +1,4 @@
-import './Paragraph';
+import './Paragraph.css';
 
 function Paragraph ({textSize, textColor}) {
 

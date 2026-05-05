@@ -1,8 +1,5 @@
 .paragraph {
     color: #8E95A9;
-    font-family: Poppins;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 24px;
+    font-family: Google Sans, system-ui, 'Segoe UI', Roboto, sans-serif;
+    font-size: 24px !important;
 }

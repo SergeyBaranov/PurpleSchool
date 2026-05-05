@@ -1,4 +1,4 @@
-import './Heading';
+import './Heading.css';
 
 
 function Heading({ title }) {

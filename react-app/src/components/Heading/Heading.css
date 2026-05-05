@@ -1,8 +1,10 @@
 .title {
-    font-family: Poppins;
+    font-family: Google Sans, system-ui, 'Segoe UI', Roboto, sans-serif;
     font-size: 64px;
     font-style: normal;
     font-weight: 600;
     line-height: 80px; /* 125% */
     letter-spacing: -1.28px;
+    color: #EBEEF5;
+    margin: 0;
 }

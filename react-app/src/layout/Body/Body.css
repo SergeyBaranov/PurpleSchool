@@ -1,3 +1,11 @@
 .bodyContent {
     padding: 1rem;
 }
+
+.topContent {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    margin-bottom: 32px;
+    max-width: 600px;
+}
