@@ -2,20 +2,13 @@ import './JournalForm.css';
 import { useState } from 'react';
 import Button from '../Button/Button';
 
-function JournalForm() {
-
-  const [inputData, setInputData] = useState('');
-
-  const inputChange = (event) => {
-    setInputData(event.target.value)
-    console.log(inputData)
-  };
-
+function JournalForm({ onSubmit }) {
+  // Функция для обработки отправки формы
   const addJournalItem = (e) => {
     e.preventDefault();
     const formData= new FormData(e.target);
     const formProps = Object.fromEntries(formData);
-    console.log(formProps)
+    onSubmit(formProps); // Вызываем функцию onSubmit, передавая данные формы в виде объекта
   };
 
 
@@ -24,8 +17,8 @@ function JournalForm() {
         <form className='journal-form' onSubmit={addJournalItem}>
             <input type='text' name='title'/>
             <input type='date' name='date' />
-            <input type='text' name='tag' value={inputData} onChange={inputChange} />
-            <textarea name='post' cols='30' rows='10'/>
+            <input type='text' name='tag' />
+            <textarea name='text' cols='30' rows='10'/>
             <Button text='Сохранить' onClick={() => console.log('Нажали')}/>
         </form>
         
