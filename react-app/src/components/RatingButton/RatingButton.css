@@ -13,4 +13,9 @@
     color: #FFAD49;
     border: 0;
     padding: 2px 8px;
+    cursor: pointer;
+}
+
+.rating-button:hover {
+    background: rgba(0, 0, 0, 0.80);
 }
