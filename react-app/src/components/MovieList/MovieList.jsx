@@ -1,5 +1,5 @@
 import React from "react";
-import "./MovieList.css";
+import styles from "./MovieList.module.css";
 import MovieCard from "../MovieCard/MovieCard";
 
 const movies = [
@@ -47,7 +47,7 @@ const movies = [
 
 function MovieList() {
     return (
-        <div className="movieList">
+        <div className={styles.movieList}>
             {movies.map((movie) => (
                 <MovieCard
                     key={movie.id}

@@ -1,10 +1,10 @@
 import React from "react";
-import "./Header.css";
+import styles from "./Header.module.css";
 import TopMenu from '../../components/TopMenu/TopMenu';
 
 function Header() {
   return (
-    <header className="header">
+    <header className={styles.header}>
       <img src="../logo.png" alt="" />
       <TopMenu />
     </header>

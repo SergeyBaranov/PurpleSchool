@@ -1,4 +1,4 @@
-import './Paragraph.css';
+import styles from './Paragraph.module.css';
 
 function Paragraph ({textSize, textColor}) {
 
@@ -6,7 +6,7 @@ function Paragraph ({textSize, textColor}) {
     textColor = textColor || '#8E95A9';
 
     return (
-        <p className="paragraph" style={{ fontSize: textSize, color: textColor }}>
+        <p className={styles.paragraph} style={{ fontSize: textSize, color: textColor }}>
             Введите название фильма, сериала или мультфильма для поиска и добавления в избранное.
         </p>
     )

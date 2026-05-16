@@ -1,11 +1,11 @@
-import './Button.css';
+import styles from './Button.module.css';
 import React, { useState } from "react";
 
 function Button({ isLoading = false, onClick }) {
 
   return (
     <button
-      className='button accent'
+      className={`${styles.button} ${styles.accent}`}
       onClick={onClick}
       disabled={isLoading}
     >

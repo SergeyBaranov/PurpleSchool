@@ -1,5 +1,5 @@
 import React from "react";
-import './TopMenu.css';
+import styles from './TopMenu.module.css';
 import TopMenuItem from '../TopMenuItem/TopMenuItem';
 
 const loginIcon = () => {
@@ -10,7 +10,7 @@ const loginIcon = () => {
 
 function TopMenu() {
   return (
-    <ul className="top-menu">
+    <ul className={styles['top-menu']}>
       <TopMenuItem title="Поиск фильмов" />
       <TopMenuItem title="Мои фильмы" />
       <TopMenuItem title="Войти" icon={loginIcon()} />

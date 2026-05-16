@@ -1,10 +1,10 @@
 import React from "react";
-import './Poster.css';
+import styles from './Poster.module.css';
 import { RatingButton } from "../RatingButton/RatingButton";
 
 function Poster({ src }) {
     return (
-        <div className="poster">
+        <div className={styles.poster}>
             <RatingButton />
             <img src={src} alt="Poster" />            
         </div>

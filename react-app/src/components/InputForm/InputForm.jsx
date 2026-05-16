@@ -1,7 +1,7 @@
 import React from "react";
 import Button from "../Button/Button";
 import InputComponent from "../InputComponent/InputComponent";
-import './InputForm.css';
+import styles from './InputForm.module.css';
 import { useState } from "react";
 
 function InputForm() {
@@ -24,7 +24,7 @@ function InputForm() {
     }
 
     return (
-        <form onSubmit={handleSubmit} className="formSearch">
+        <form onSubmit={handleSubmit} className={styles.formSearch}>
             <InputComponent
                 value={name}
                 onChange={(e) => setName(e.target.value)}

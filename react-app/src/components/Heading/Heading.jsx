@@ -1,9 +1,9 @@
-import './Heading.css';
+import styles from './Heading.module.css';
 
 
 function Heading({ title }) {
   return (
-    <h1 className='title'>{title}</h1>
+    <h1 className={styles.title}>{title}</h1>
   );
 }
 

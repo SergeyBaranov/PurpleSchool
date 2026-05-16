@@ -1,9 +1,9 @@
 import React from "react";
-import './AddToFavouriteButton.css';
+import styles from './AddToFavouriteButton.module.css';
 
 function AddToFavouriteButton() {
     return (
-        <button className="addToFavouriteButton">
+        <button className={styles.addToFavouriteButton}>
             <img src='./icons/like.svg' alt='like' />
             Добавить в избранное
         </button>

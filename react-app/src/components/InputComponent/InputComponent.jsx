@@ -1,18 +1,18 @@
 import React from "react";
-import './InputComponent.css';
+import styles from './InputComponent.module.css';
 
 function InputComponent({value, onChange, icon, showIcon = false}) {
 
     return (
-        <div className="inputComponent">
-            {showIcon && icon && <span className="inputIcon">{icon}</span>}
+        <div className={styles.inputComponent}>
+            {showIcon && icon && <span className={styles.inputIcon}>{icon}</span>}
             <input
                 type="text"
                 placeholder="Введите название"
                 name="text"
                 value={value}
                 onChange={onChange}
-                className='inputBase'
+                className={styles.inputBase}
             />
         </div>
     )
