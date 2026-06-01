@@ -1,17 +1,22 @@
 import styles from './Button.module.css';
-import React, { useState } from "react";
+import React from "react";
 
-function Button({ isLoading = false, onClick }) {
+const Button = React.forwardRef(({ isLoading = false, onClick, children, text, type = 'button', className = '' }, ref) => {
+  const label = isLoading ? 'Идет поиск...' : (children || text || 'Искать');
 
   return (
     <button
-      className={`${styles.button} ${styles.accent}`}
+      ref={ref}
+      type={type}
+      className={`${styles.button} ${styles.accent} ${className}`.trim()}
       onClick={onClick}
       disabled={isLoading}
     >
-      {isLoading ? 'Идет поиск...' : 'Искать'}
+      {label}
     </button>
   );
-}
+});
+
+Button.displayName = 'Button';
 
 export default Button;

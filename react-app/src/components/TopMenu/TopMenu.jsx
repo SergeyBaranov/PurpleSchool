@@ -8,12 +8,16 @@ const loginIcon = () => {
     )
 }
 
-function TopMenu() {
+function TopMenu({ currentUser, onLogout }) {
   return (
     <ul className={styles['top-menu']}>
       <TopMenuItem title="Поиск фильмов" />
       <TopMenuItem title="Мои фильмы" />
-      <TopMenuItem title="Войти" icon={loginIcon()} />
+      {currentUser && currentUser.isLogined ? (
+        <TopMenuItem title={`${currentUser.name} (Выход)`} onClick={onLogout} />
+      ) : (
+        <TopMenuItem title="Войти" icon={loginIcon()} />
+      )}
     </ul>
   );
 }
