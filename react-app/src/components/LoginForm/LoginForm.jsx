@@ -1,18 +1,19 @@
-import React, { useRef } from "react";
+import React, { useRef, useContext } from "react";
 import styles from './LoginForm.module.css';
 import Button from "../Button/Button";
 import InputComponent from "../InputComponent/InputComponent";
 import Heading from "../Heading/Heading";
-
-function LoginForm({ onLogin }) {
+import UserContext from '../../context/UserContext';
+function LoginForm() {
     const inputRef = useRef(null);
     const buttonRef = useRef(null);
+    const { login } = useContext(UserContext);
 
     const handleSubmit = (e) => {
         e.preventDefault();
         const userName = inputRef.current?.value;
         if (userName) {
-            onLogin(userName);
+            login(userName);
             inputRef.current.value = '';
         }
     };

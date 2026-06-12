@@ -6,11 +6,10 @@ import Paragraph from "../../components/Paragraph/Paragraph";
 import MovieList from "../../components/MovieList/MovieList";
 import LoginForm from "../../components/LoginForm/LoginForm";
 
-function Body({ currentUser, onLogin }) { 
+function Body() {
     return (
         
         <div className={styles.bodyContent}>
-            <LoginForm onLogin={onLogin}/>
             <div className={styles.topContent}>
                 <Heading title="Поиск фильмов" />
                 <Paragraph />
