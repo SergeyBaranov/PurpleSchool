@@ -4,6 +4,7 @@ import AddToFavouriteButton from '../AddToFavouriteButton/AddToFavouriteButton';
 import MoviePosterTitle from '../MoviePosterTitle/MoviePosterTitle';
 import Poster from '../Poster/Poster';
 import { Movie } from '../../types';
+import { Link } from 'react-router-dom';
 
 interface MovieCardProps {
   movie: Movie;
@@ -11,11 +12,11 @@ interface MovieCardProps {
 
 const MovieCard: React.FC<MovieCardProps> = ({ movie }) => {
   return (
-    <div className={styles.movieCard}>
+    <Link to={`/movie/${movie.id}`} className={styles.movieCard}>
       <Poster src={movie.posterUrl} />
       <MoviePosterTitle title={movie.title} /> 
       <AddToFavouriteButton />
-    </div>
+    </Link>
   );
 };
 

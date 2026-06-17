@@ -1,0 +1,8 @@
+.appLayout {
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  padding: 16px;
+}

@@ -2,7 +2,6 @@ import React, { useContext } from "react";
 import styles from './TopMenu.module.css';
 import TopMenuItem from '../TopMenuItem/TopMenuItem';
 import UserContext from '../../context/UserContext';
-import { useNavigate } from 'react-router-dom';
 
 const loginIcon = (): JSX.Element => {
   return (
@@ -12,7 +11,6 @@ const loginIcon = (): JSX.Element => {
 
 const TopMenu: React.FC = () => {
   const context = useContext(UserContext);
-  const navigate = useNavigate();
 
   if (!context) {
     throw new Error('TopMenu must be used within UserProvider');
@@ -22,15 +20,15 @@ const TopMenu: React.FC = () => {
 
   return (
     <ul className={styles['top-menu']}>
-      <TopMenuItem title="Поиск фильмов" onClick={() => navigate('/')} />
-      <TopMenuItem title="Мои фильмы" />
+      <TopMenuItem title="Поиск фильмов" to="/" />
+      <TopMenuItem title="Мои фильмы" to="/favorites" />
       {currentUser && currentUser.isLogined ? (
         <>
-          <TopMenuItem title={currentUser.name} />
+          <TopMenuItem title={currentUser.name} to="/favorites" />
           <TopMenuItem title="Выйти" onClick={logout} />
         </>
       ) : (
-        <TopMenuItem title="Войти" icon={loginIcon()} onClick={() => navigate('/login')} />
+        <TopMenuItem title="Войти" icon={loginIcon()} to="/login" />
       )}
     </ul>
   );
